@@ -1,0 +1,13 @@
+h1{
+    color: peru;
+    text-align: center;
+    margin-top: 5em;
+}
+
+.bg{
+    margin: 1em auto;
+    width: 20em;
+    border-radius: 1em;
+    border: 0;
+    background-color: peachpuff;
+}

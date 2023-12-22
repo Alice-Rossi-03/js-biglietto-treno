@@ -22,15 +22,34 @@ let clientAge = prompt ( "Inserisci la tua età: (in anni)")
 console.log (distanceKm)
 console.log (clientAge) 
 
-// terzo passo - creazione dell'algoritmo 
+// terzo passo - variabili per calcolare il prezzo 
+
+let minorPrice = (`${((distanceKm * 0.21) - 20/100)}`) 
+let overPrice = (`${((distanceKm * 0.21) - 40/100)}`) 
+let normalPrice = (`${((distanceKm * 0.21))}`) 
+
+// quarto passo - controllo del calcolo delle variabili  
+
+console.log (minorPrice)
+console.log (overPrice)
+console.log (normalPrice)
+
+// quinto passo - creazione dell'algoritmo 
 
 if (clientAge < 18){
-    document.writeln((distanceKm * 0.21) - 20/100)
+    document.writeln(`"<div>" + The distance: ${distanceKm} km + "</div>"`)
+    document.writeln(`Your age: ${clientAge} y.o`) 
+    document.writeln(`Dato che sei minorenne devi pagare: € ${minorPrice} `) 
 } else if (clientAge > 65){
-    document.writeln((distanceKm * 0.21) - 40/100)
+    document.writeln(`The distance: ${distanceKm} km`)
+    document.writeln(`Your age: ${clientAge} y.o`) 
+    document.writeln(`Dato che sei over-65 devi pagare: € ${overPrice} `)
 } else if (18 < clientAge < 65){
-    document.writeln((distanceKm * 0.21))
+    document.writeln(`The distance: ${distanceKm} km`)
+    document.writeln(`Your age: ${clientAge} y.o`) 
+    document.writeln(`Devi pagare il biglietto pieno: € ${normalPrice}`)
 } else {
     document.writeln("Uhmm error")
 }
+
 
