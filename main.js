@@ -36,10 +36,10 @@ console.log (normalPrice)
 
 // quinto passo - creazione dell'algoritmo 
 
-if (clientAge < 18){
-    document.writeln(`"<div>" + The distance: ${distanceKm} km + "</div>"`)
+if (clientAge < 18){ 
+    document.writeln(`The distance: ${distanceKm} km`)
     document.writeln(`Your age: ${clientAge} y.o`) 
-    document.writeln(`Dato che sei minorenne devi pagare: € ${minorPrice} `) 
+    document.writeln(`Dato che sei minorenne devi pagare: € ${minorPrice} `)
 } else if (clientAge > 65){
     document.writeln(`The distance: ${distanceKm} km`)
     document.writeln(`Your age: ${clientAge} y.o`) 
@@ -49,7 +49,12 @@ if (clientAge < 18){
     document.writeln(`Your age: ${clientAge} y.o`) 
     document.writeln(`Devi pagare il biglietto pieno: € ${normalPrice}`)
 } else {
-    document.writeln("Uhmm error")
+    document.writeln("Uhmm error!")
 }
 
 
+// still cant use the property getElementById ⬇︎
+
+// document.writeln(`The distance: ${distanceKm} km`) = document.getElementById("distance"); 
+// document.getElementById("age") == document.writeln(`Your age: ${clientAge} y.o`);
+// document.getElementById("price") == document.writeln(`Dato che sei minorenne devi pagare: € ${minorPrice} `); 
