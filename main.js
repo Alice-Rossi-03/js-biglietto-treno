@@ -32,29 +32,88 @@ let normalPrice = (`${((distanceKm * 0.21))}`)
 
 console.log (minorPrice)
 console.log (overPrice)
-console.log (normalPrice)
+console.log (normalPrice) 
 
 // quinto passo - creazione dell'algoritmo 
 
+// if (clientAge < 18){ 
+    // document.writeln(`The distance: ${distanceKm} km`)
+    // document.writeln(`Your age: ${clientAge} y.o`) 
+    // document.writeln(`Dato che sei minorenne devi pagare: € ${minorPrice} `)
+// } else if (clientAge > 65){
+    // document.writeln(`The distance: ${distanceKm} km`)
+    // document.writeln(`Your age: ${clientAge} y.o`) 
+    // document.writeln(`Dato che sei over-65 devi pagare: € ${overPrice} `)
+// } else if (18 < clientAge < 65){
+    // document.writeln(`The distance: ${distanceKm} km`)
+    // document.writeln(`Your age: ${clientAge} y.o`) 
+    // document.writeln(`Devi pagare il biglietto pieno: € ${normalPrice}`)
+// } else {
+    // document.writeln("Uhmm error!")
+// }
+
+
 if (clientAge < 18){ 
-    document.writeln(`The distance: ${distanceKm} km`)
-    document.writeln(`Your age: ${clientAge} y.o`) 
-    document.writeln(`Dato che sei minorenne devi pagare: € ${minorPrice} `)
+
+    // creating FIRST div 
+    elem = document.createElement("div");
+    elem.id = 'distance';
+    elem.innerHTML = `The distance: ${distanceKm} km` 
+    document.body.insertBefore(elem,document.body.childNodes[8]);
+
+    // creating SECOND div 
+    elem = document.createElement("div");
+    elem.id = 'age';
+    elem.innerHTML = `Your age: ${clientAge} y.o`
+    document.body.insertBefore(elem,document.body.childNodes[9]);
+
+    // creating THIRD div 
+    elem = document.createElement("div");
+    elem.id = 'price'; 
+    elem.innerHTML = `Dato che sei minorenne devi pagare: € ${minorPrice} `
+    document.body.insertBefore(elem,document.body.childNodes[10]);
+
 } else if (clientAge > 65){
-    document.writeln(`The distance: ${distanceKm} km`)
-    document.writeln(`Your age: ${clientAge} y.o`) 
-    document.writeln(`Dato che sei over-65 devi pagare: € ${overPrice} `)
+
+    // creating FIRST div 
+    elem = document.createElement("div");
+    elem.id = 'distance';
+    elem.innerHTML = `The distance: ${distanceKm} km` 
+    document.body.insertBefore(elem,document.body.childNodes[8]);
+
+    // creating SECOND div 
+    elem = document.createElement("div");
+    elem.id = 'age';
+    elem.innerHTML = `Your age: ${clientAge} y.o`
+    document.body.insertBefore(elem,document.body.childNodes[9]);
+
+    // creating THIRD div 
+    elem = document.createElement("div");
+    elem.id = 'price'; 
+    elem.innerHTML = `Dato che sei over-65 devi pagare: € ${overPrice} `
+    document.body.insertBefore(elem,document.body.childNodes[10]);
+
 } else if (18 < clientAge < 65){
-    document.writeln(`The distance: ${distanceKm} km`)
-    document.writeln(`Your age: ${clientAge} y.o`) 
-    document.writeln(`Devi pagare il biglietto pieno: € ${normalPrice}`)
+
+    // creating FIRST div 
+    elem = document.createElement("div");
+    elem.id = 'distance';
+    elem.innerHTML = `The distance: ${distanceKm} km` 
+    document.body.insertBefore(elem,document.body.childNodes[8]);
+
+    // creating SECOND div 
+    elem = document.createElement("div");
+    elem.id = 'age';
+    elem.innerHTML = `Your age: ${clientAge} y.o`
+    document.body.insertBefore(elem,document.body.childNodes[9]);
+
+    // creating THIRD div 
+    elem = document.createElement("div");
+    elem.id = 'price'; 
+    elem.innerHTML = `Devi pagare il prezzo pieno: € ${normalPrice} `
+    document.body.insertBefore(elem,document.body.childNodes[10]);
+
 } else {
     document.writeln("Uhmm error!")
 }
 
-
-// still cant use the property getElementById ⬇︎
-
-// document.writeln(`The distance: ${distanceKm} km`) = document.getElementById("distance"); 
-// document.getElementById("age") == document.writeln(`Your age: ${clientAge} y.o`);
-// document.getElementById("price") == document.writeln(`Dato che sei minorenne devi pagare: € ${minorPrice} `); 

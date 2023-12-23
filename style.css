@@ -1,7 +1,6 @@
 h1{
     color: peru;
     text-align: center;
-    margin-top: 1em;
 }
 
 .bg{
@@ -10,19 +9,15 @@ h1{
     border-radius: 1em;
     border: 0;
     background-color: peachpuff;
-    padding: 1em;
+    padding: 0.5em;
 }
 
-.box{
+/* #distance, #age #price{
     background-color: beige;
     border-radius: 0.5em;
     padding: 1em;
     font-family: 'poppins';
-}
+    text-align: center;
+} */
 
-#d-flex{
-    display: flex;
-    flex-direction: column;
-    gap: 1em;
-}
 
