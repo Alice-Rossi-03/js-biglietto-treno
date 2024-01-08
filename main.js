@@ -24,9 +24,9 @@ console.log (clientAge)
 
 // terzo passo - variabili per calcolare il prezzo 
 
-let minorPrice = (`${((distanceKm * 0.21) - 20/100)}`) 
-let overPrice = (`${((distanceKm * 0.21) - 40/100)}`) 
-let normalPrice = (`${((distanceKm * 0.21))}`) 
+let minorPrice = (`${((distanceKm * 0.21) * 0.8).toFixed(2)}`) 
+let overPrice = (`${((distanceKm * 0.21) * 0.6).toFixed(2)}`) 
+let normalPrice = (`${((distanceKm * 0.21)).toFixed(2)}`) 
 
 // quarto passo - controllo del calcolo delle variabili  
 
@@ -93,7 +93,7 @@ if (clientAge < 18){
     elem.innerHTML = `Dato che sei over-65 devi pagare: € ${overPrice} `
     document.body.insertBefore(elem,document.body.childNodes[10]);
 
-} else if (18 < clientAge < 65){
+} else if (18 <= clientAge <= 65){
 
     // creating FIRST div 
     elem = document.createElement("div");
